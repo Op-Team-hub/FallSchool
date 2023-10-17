@@ -3,77 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
-    <link rel="stylesheet" href="css/stanis.css">
+    <title>Homework</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blocks.css">
 </head>
 <body>
-    <header class="header">
-        <div class="two-list">
-            <nav>
-                <ol>
-                    <li>item 1</li>
-                    <li>item 2</li>
-                    <li>item 3</li>
-                </ol>
-            </nav>
-            <nav>
-                <ol start="4">
-                    <li>item 1</li>
-                    <li>item 2</li>
-                    <li>item 3</li>
-                </ol>
-            </nav>
+    <main class = "main">
+        <header class="header_registration">
+            <div class="div_header">
+                <img src="icons/logo.svg" alt="logo" class="logo_image">
+                <button class="button_white">
+                    <p class="button_exit_text">Выйти из аккаунта</p>
+                </button>
+            </div>
+        </header>
+        <div class="div_main">
+            <div>
+                <button class="button_white">
+                    <p class="button_exit_text">На главную</p>
+                </button>
+                <div style="margin-top: 16px;">
+                    <div style="display: flex; margin-bottom: 16px;">
+                        <p class="big_title">Создание профиля</p>
+                        <div style="display: flex; align-items:flex-end; margin-left: 16px; gap: 16px; margin-bottom: 2px;">
+                            <p class="small_title">/</p>
+                            <p class="small_title">О себе</p>
+                        </div>
+                    </div>
+                    <div style="display: flex;">
+                        <div class="progress_bar_now"></div>
+                        <div class="progress_bar_full"></div>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; gap: 60px;">
+                <form action="">
+                    <div class="div_left">
+                        <div class="div_photo">
+                            <div class="div_photo_inner">
+                                <p class="big_text" style="color: black;">Аватар профиля</p>
+                                <button class="button_upload">
+                                    <p class="button_font">Загрузить</p>
+                                </button>
+                            </div>
+                            <p class="small_title">
+                                Загрузите фотографию весом не более 10 мб
+                            </p>
+                        </div>
+                        <div class="div_form">
+                            <div style="display: flex; gap: 8px; flex-direction: column;">
+                                <div class="div_form_inner">
+                                    <input name="name" id="name" type="text" class="input_text">
+                                    <label for="name" class="label_input">Имя и фамилия</label>
+                                </div>
+                                <div class="radio_select">
+                                    <div style="display: flex; gap: 8px;">
+                                        <input name="gender" id="male" type="radio" class="radio_input">
+                                        <label for="male" class="big_text">Парень</label>
+                                    </div>
+                                    <div style="display: flex; gap: 8px;">
+                                        <input name="gender" id="female" type="radio" class="radio_input">
+                                        <label for="female" class="big_text">Девушка</label>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            <div class="div_form_inner">
+                                <input type="date" class="input_date">
+                            </div>
+                            <div class="div_form_inner">
+                                <label for="telegram_id" class="label_input">Телеграм</label>
+                                <input name="telegram_id" id="telegram_id" type="text" class="input_text">
+                            </div>
+                            <div class="div_form_inner">
+                                <label for="phone_number" class="label_input">Номер телефона</label>
+                                <input name="phone_number" id="phone_number" type="text" class="input_text">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div style="display: flex; flex-direction: column; gap: 24px;">
+                    <div style="display: flex; gap: 16px; flex-direction: column;">
+                        <div>
+                            <p class="small_title" style="color: rgb(93, 91, 102); margin-left: 16px;">
+                                Так будет выглядеть твоя будующая страница
+                            </p>
+                        </div>
+                        <div class="id_card">
+                            <div class="id_card_left">
+                                <div class="id_card_photo_mini"></div>
+                                <button class="button_show_contact">
+                                    <p class="button_font" style="font-size: 8px;">Показать контакты</p>
+                                </button>
+                            </div>
+                            <div class="id_card_right">
+                                <div style="display: flex; gap: 20px; flex-direction: column;">
+                                    <div style="display: flex; gap: 10px; flex-direction: column;">
+                                        <div>
+                                            <p class="id_card_name">Саша Фефелов</p>
+                                        </div>
+                                        <div style="display: flex; gap: 4px; align-items: center;">
+                                            <p class="id_card_tag" style="font-size: 9px;">Парень</p>
+                                            <img src="../src/icons/ellipse.svg" style="height: 3px; width: 3px;" alt="*">
+                                            <p class="id_card_tag" style="font-size: 9px;">21 год</p>
+                                            <img src="../src/icons/ellipse.svg" style="height: 3px; width: 3px;" alt="*">
+                                            <div class="tag_mini"></div>
+                                        </div>
+                                        <div class="tag_mini2"></div>
+                                        <div style="display: flex; gap: 16px;">
+                                            <p class="id_card_description">
+                                                Мне очень нравится устраивать вечеринки, дебоширить и мазать с...
+                                            </p>
+                                            <div style="display: flex; gap: 4px; align-items:center">
+                                                <p class="id_card_description" style="color: rgba(121, 83, 195, 1);">
+                                                    развернуть
+                                                </p>
+                                                <div class="expand">
+                                                    <img style="height: 2.5px;" src="../src/icons/rectangle.svg" alt="\/">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="id_card_right_tag">
+                                    <div class="tag_mini3"></div>
+                                    <div style="display: flex; flex-direction: column; gap: 2px;">
+                                        <div class="tag1"></div>
+                                        <div class="tag2"></div>
+                                    </div>
+                                    <div class="id_card_line"></div>
+                                    <div style="display: flex; gap: 4px;">
+                                        <div class="tag3"></div>
+                                        <div class="tag3" style="width: 194px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div style="display: flex; flex-direction: column; gap: 4px;">
+                            <div>
+                                <p class="big_title" style="font-size: 16px; line-height: 24px;">Мы совсем ничего про тебя не знаем</p>
+                            </div>
+                            <div>
+                                <p class="id_card_description" style="font-size: 14px; line-height: 20px;">Расскажи о себе. 
+                                    Люди пишут тем, кому доверяют. Тем более при поиске соседа</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; justify-content: center; align-items: center">
+                            <img src="../src/icons/sad.svg" alt=";)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: flex-end;">
+                <button class="button_continue">
+                    <p class="button_font" style="font-size: 16px;">продолжить</p>
+                </button>
+            </div>
         </div>
-        <div class="two-list">
-            <nav>
-                <ul>
-                    <li>item 1</li>
-                    <li>item 2</li>
-                    <li>item 3</li>
-                </ul>
-            </nav>
-            <nav>
-                <ul>
-                    <li>item 1</li>
-                    <li>item 2</li>
-                    <li>item 3</li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section>
-            <h1>header 1</h1>
-            <h2>header 2</h2>
-            <h3>header 3</h3>
-            <h4>header 4</h4>
-            <h5>header 5</h5>
-            <h6>header 6</h6>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ipsum aliquid pariatur nam reprehenderit officia voluptatibus, quam vel ullam nemo deleniti itaque ducimus blanditiis minima. Quaerat numquam voluptates nostrum temporibus.</p>
-        </section>
-        <section>
-            <!-- <img src="https://w.forfun.com/fetch/0b/0bf718f010dc198fe88ef3f614b4e659.jpeg" alt="photo"> -->
-            <img src="#" alt="smt went wrong...">
-            <a href="https://w.forfun.com/fetch/0b/0bf718f010dc198fe88ef3f614b4e659.jpeg">click me</a>
-        </section>
-        <section>
-            <form>
-                <label for="name">Insert your name</label>
-                <input name="name" id="name" type="text" placeholder="name">
-                <label for="password">Enter your password</label>
-                <input name="password" id="password" type="password" placeholder="password">
-                <label for="textarea"></label>
-                <textarea name="textarea" id="textarea" cols="15" rows="5" placeholder="comments"></textarea>
-                <button class="button">click me FFS</button>
-            </form>
-        </section>
     </main>
-    <section></section>
-    <aside></aside> ads
     <footer class="footer">
-        <p>Lorem ipsum dolor <i>sit amet</i> consectetur <s>adipisicing elit</s>. Accusamus <span class="span">sint, nesciunt blanditiis</span> recusandae est ab accusantium facilis ipsum suscipit, rerum rem! Veniam accusantium aliquam culpa recusandae cumque labore nihil animi?</p>
-        <p>Lorem ipsum <b>dolor sit</b>, amet <u>consectetur adipisicing</u> elit. Facilis ratione earum laudantium! At ducimus alias, est sapiente praesentium doloribus dolores atque quasi quos, fugiat aspernatur! Eos velit rem tenetur iste.</p>
+        <div class="footer_inner">
+            <div style="display: flex; flex-direction: column; gap: 40px;">
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <p class="footer_title">Support@homeet.com</p>
+                    <p class="button_exit_text" style="color: rgb(170, 170, 170);">Техническая поддержка</p>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                    <div style="display: flex; gap: 32px;">
+                        <p class="big_text">О сервисе</p>
+                        <p class="big_text">Контакты</p>
+                        <p class="big_text">Политика конфиденциальности</p>
+                    </div>
+                    <div style="display: flex; gap: 8px;">
+                        <div class="button_icon">
+                            <img src="../src/icons/telegram_logo.svg" alt="tg">
+                        </div>
+                        <div class="button_icon">
+                            <img src="../src/icons/vk_logo.svg" alt="vk">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_line"></div>
+            <div style="display: flex; justify-content: space-between;">
+                <div>
+                    <p class="small_title" style="color: rgb(170, 170, 170); line-height: 20px;">
+                        Предложение не является публичной офертой.
+                    </p>
+                    <p class="small_title" style="color: rgb(170, 170, 170); line-height: 20px;">
+                        Сервис не несет ответственности за действия пользователей, достоверность информации и т.д.
+                    </p>
+                </div>
+                <div style="display: flex; flex-wrap: nowrap; align-items: flex-end">
+                    <p class="small_title" style="color: rgb(170, 170, 170); line-height: 20px;">
+                        Сделано в <span class="small_title" style="color: rgb(93, 91, 102); line-height: 20px;">бвср</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div style="background-color: rgb(121, 83, 195); height: 12px;"></div>
     </footer>
 </body>
 </html>
