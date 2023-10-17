@@ -73,6 +73,14 @@
     flex-direction: column;
 }
 
+.div_form_inner1 {
+    width: 366px;
+    min-height: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
 .div_form_inner:focus-within label {
     margin-top: 0px;
     color: rgb(93, 91, 102);
@@ -102,7 +110,7 @@
 .id_card_photo_mini {
     height: 140px;
     width: 140px;
-    border-radius: 32px;
+    border-radius: 16px;
     border: 1px dashed;
 }
 

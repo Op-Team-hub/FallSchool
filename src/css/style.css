@@ -107,6 +107,14 @@
     letter-spacing: -0.8px;
 }
 
+.form_title {
+    color: rgb(93, 91, 102);
+    font-family: "MuseoSansCyrl300";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
 .two-list{
     display: flex;
     justify-content: space-around;
@@ -174,6 +182,9 @@
 .button_upload {
     cursor: pointer;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 36px;
     width: 144px;
     border-radius: 8px;
@@ -196,7 +207,7 @@
     border: none;
     /*height: 40px;
     width: 173px;*/
-    padding: 7px 15px;
+    padding: 8px 16px;
     border-radius: 8px;
     border: 1px solid;
     border-color: rgb(121, 83, 195);
@@ -223,13 +234,13 @@
 }
 
 .input_text {
-    cursor: pointer;
+    cursor: text;
     position: relative;
     border: none;
     outline: none;
     padding: 16px 12px;
     height: 32px;
-    width: 334px;
+    width: 344px;
     border-radius: 8px;
     background-color: rgb(244, 244, 246);
 }
@@ -293,7 +304,7 @@ input[type = "text"] {
 }
 
 .progress_bar_full {
-    width: 1000px;
+    width: 100%;
 	height: 2px;
 	background: rgb(244, 244, 246);
 }
@@ -304,14 +315,57 @@ input[type = "text"] {
 	background: rgb(205, 189, 219);
 }
 
-/*.radio_input {
-    display: inline-flex;
-    align-items: center;
-    user-select: none;
-    transition: 0.2s all;
+.radio_input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
 }
 
-.radio_input::before {
+.radio_input + label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.radio_input + label::before {
+    content: '';
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+    flex-shrink: 0; flex-grow: 0;
+    background-image: url(../icons/radio_off.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.radio_input:hover:not(:checked) + label::before {
+    /*background-color: rgba(120, 83, 195, 0.2);*/
+    background-image: url(../icons/radio_hover.svg);
+}
+
+.radio_input:checked + label::before {
+    background-image: url(../icons/radio_on.svg)
+}
+
+.radio_input.course + label::before {
+    border: 1px solid rgb(121, 83, 195);
+    border-radius: 4px;
+    background-image: none;
+}
+
+.radio_input.course:hover + label::before {
+    background-color: rgba(120, 83, 195, 0.2);
+    border-color: rgb(120, 83, 195);
+    background-image: none;
+}
+
+.radio_input.course:checked + label::before {
+    background-color: rgb(121, 83, 195);
+    background-image: url(../icons/tick.svg);
+}
+
+/*.radio_input::before {
     background-image: url(../icons/radio_off.svg);
     background-position: 50%;
     height: 16px;
@@ -338,6 +392,9 @@ input[type = "text"] {
 .tag_mini2 {
     width: 121px;
     height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(238, 238, 241);
     border-radius: 4px;
 }
@@ -385,4 +442,110 @@ input[type = "text"] {
     background-color: rgb(121, 83, 195);
     margin-top: 4px;
     margin-bottom: 4px; 
+}
+
+.href_not_serious {
+    height: 48px; 
+    width: 96px; 
+    cursor: pointer; 
+    position: absolute;
+}
+
+.select_input {
+    cursor: pointer;
+    position: relative;
+    border: none;
+    outline: none;
+    padding: 16px;
+    height: 56px;
+    width: 366px;
+    border-radius: 8px;
+    background-color: rgb(244, 244, 246);
+}
+
+.select_input + label {
+    position: absolute;
+    color: rgb(161, 166, 177);
+    font-family: "MuseoSansCyrl300";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 16px;
+    z-index: 1;
+}
+
+/*.label_input_select:checked + label::before {
+    opacity: 0;
+} doesn't work...*/
+
+.course_select {
+    padding: 8px;
+    width: 336px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.radio_course {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.radio_course + label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    transition: 0.2s all;
+}
+
+.radio_course + label::before {
+    content: "1";
+    font-family: "MuseoSansCyrl300";
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(4, 0, 19);
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: none;
+    transition: 0.2s all;
+    border-radius: 8px;
+}
+
+.radio_course:hover + label::before {
+    background-color: rgba(121, 83, 195, 0.2);
+    transition: 0.2s all;
+}
+
+.radio_course:checked + label::before {
+    color: white;
+    background-color: rgb(121, 83, 195);
+    transition: 0.2s all;
+}
+
+.radio_course.one + label::before {
+    content: "1";
+}
+
+.radio_course.two + label::before {
+    content: "2";
+}
+
+.radio_course.three + label::before {
+    content: "3";
+}
+
+.radio_course.four + label::before {
+    content: "4";
+}
+
+.radio_course.five + label::before {
+    content: "5";
+}
+
+.radio_course.six + label::before {
+    content: "6";
 }
