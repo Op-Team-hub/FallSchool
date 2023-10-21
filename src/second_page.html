@@ -21,67 +21,125 @@
         <div class="div_main">
             <div>
                 <button class="button_white">
-                    <p class="button_exit_text">На главную</p>
+                    <p class="button_exit_text">Назад</p>
                 </button>
                 <div style="margin-top: 16px;">
                     <div style="display: flex; margin-bottom: 16px;">
                         <p class="big_title">Создание профиля</p>
                         <div style="display: flex; align-items:flex-end; margin-left: 16px; gap: 16px; margin-bottom: 2px;">
                             <p class="small_title">/</p>
-                            <p class="small_title">О себе</p>
+                            <p class="small_title">Образование</p>
                         </div>
                     </div>
                     <div style="display: flex;">
-                        <div class="progress_bar_now"></div>
+                        <div class="progress_bar_now" style="width: 408px;"></div>
                         <div class="progress_bar_full"></div>
                     </div>
                 </div>
             </div>
             <div style="display: flex; gap: 60px;">
                 <form action="">
-                    <div class="div_left">
-                        <div class="div_photo">
-                            <div class="div_photo_inner">
-                                <p class="big_text" style="color: black;">Аватар профиля</p>
-                                <input type="file" name="photo_upload" style="opacity: 0; position: absolute;;" id="photo_upload">
-                                    <p class="button_font">Загрузить</p>
-                                </input>
-                                <label for="photo_upload" class="button_upload">
-                                    <p class="button_font">Загрузить</p>
-                                </label>
+                    <div class="div_form">
+                        <div class="radio_select">
+                            <div style="display: flex; gap: 8px;">
+                                <input name="status" id="student" type="radio" class="radio_input">
+                                <label for="student" class="big_text">Студент / выпускник</label>
                             </div>
-                            <p class="small_title">
-                                Загрузите фотографию весом не более 10 мб
-                            </p>
+                            <div style="display: flex; gap: 8px;">
+                                <input name="status" id="employee" type="radio" class="radio_input">
+                                <label for="employee" class="big_text">Сотрудник</label>
+                            </div>                                    
                         </div>
-                        <div class="div_form">
-                            <div style="display: flex; gap: 8px; flex-direction: column;">
-                                <div class="div_form_inner">
-                                    <input name="name" id="name" type="text" class="input_text">
-                                    <label for="name" class="label_input">Имя и фамилия</label>
-                                </div>
-                                <div class="radio_select">
-                                    <div style="display: flex; gap: 8px;">
-                                        <input name="gender" id="male" type="radio" class="radio_input">
-                                        <label for="male" class="big_text">Парень</label>
+                        <div class="div_form" style="gap: 16px;">
+                            <div style="display: flex; flex-direction: column;">
+                                <div style="display: flex; flex-direction: column; gap: 4px;">
+                                    <p class="form_title">Курс</p>
+                                    <div class="course_select">
+                                        <div>
+                                            <input name="course" id="course1" type="radio" class="radio_course one">
+                                            <label for="course1"></label>
+                                        </div>
+                                        <div>
+                                            <input name="course" id="course2" type="radio" class="radio_course two">
+                                            <label for="course2"></label>
+                                        </div>
+                                        <div>
+                                            <input name="course" id="course3" type="radio" class="radio_course three">
+                                            <label for="course3"></label>
+                                        </div>
+                                        <div>
+                                            <input name="course" id="course4" type="radio" class="radio_course four">
+                                            <label for="course4"></label>
+                                        </div>
+                                        <div>
+                                            <input name="course" id="course5" type="radio" class="radio_course five">
+                                            <label for="course5"></label>
+                                        </div>
+                                        <div>
+                                            <input name="course" id="course6" type="radio" class="radio_course six">
+                                            <label for="course6"></label>
+                                        </div>
                                     </div>
-                                    <div style="display: flex; gap: 8px;">
-                                        <input name="gender" id="female" type="radio" class="radio_input">
-                                        <label for="female" class="big_text">Девушка</label>
-                                    </div>                                    
+                                </div>
+                                <div style="padding: 8px 4px;">
+                                    <input name="course" id="course0" type="radio" class="radio_input course">
+                                    <label for="course0" class="big_text">Уже окончил Вышку</label>
                                 </div>
                             </div>
-                            <div class="div_form_inner">
-                                <input type="date" class="input_date">
+                            <div class="div_form_inner1">
+                                <div>
+                                    <p class="form_title">Ступень образования</p>
+                                </div>
+                                <div style="display: flex; flex-direction: column;">
+                                    <select name="education_degree" id="education_degree" class="select_input">
+                                        <option value="empty"></option>
+                                        <option value="bachelor">Бульбазавр</option>
+                                        <option value="specialist">Специалитет</option>
+                                        <option value="master">Магистр</option>
+                                        <option value="graduate">Аспирант</option>
+                                    </select>
+                                    <label for="education_degree">
+                                        Степень образования
+                                    </label>
+                                </div>
                             </div>
-                            <div class="div_form_inner">
-                                <label for="telegram_id" class="label_input">Телеграм</label>
-                                <input name="telegram_id" id="telegram_id" type="text" class="input_text">
+                            <div class="div_form_inner1">
+                                <div>
+                                    <p class="form_title">Факультет</p>
+                                </div>
+                                <div style="display: flex; flex-direction: column;">
+                                    <select name="faculty" id="faculty" class="select_input">
+                                        <option value="empty"></option>
+                                        <option value="first">Самый лучший</option>
+                                        <option value="second">В целом неплохой</option>
+                                        <option value="third">Ну такой себе</option>
+                                        <option value="last">Следующий вопрос</option>
+                                    </select>
+                                    <label for="faculty">
+                                        Факультет
+                                    </label>
+                                </div>
                             </div>
-                            <div class="div_form_inner">
-                                <label for="phone_number" class="label_input">Номер телефона</label>
-                                <input name="phone_number" id="phone_number" type="text" class="input_text">
+                            <div class="div_form_inner1">
+                                <div>
+                                    <p class="form_title">Образовательная программа</p>
+                                </div>
+                                <div style="display: flex; flex-direction: column;">
+                                    <select name="op" id="op" class="select_input">
+                                        <option value="empty"></option>
+                                        <option value="first">Самая лучшая</option>
+                                        <option value="second">В целом неплохая</option>
+                                        <option value="third">Ну такая себе</option>
+                                        <option value="last">Следующий вопрос</option>
+                                    </select>
+                                    <label for="op">
+                                        Образовательная программа
+                                    </label>
+                                </div>
                             </div>
+                        </div>
+                        <div>
+                            <input type="text" class="input_text" placeholder="Работа">
                         </div>
                     </div>
                 </form>
@@ -94,7 +152,9 @@
                         </div>
                         <div class="id_card">
                             <div class="id_card_left">
-                                <div class="id_card_photo_mini"></div>
+                                <div class="id_card_photo_mini">
+                                    <img src="../src/img/Alexandr.png" alt="">
+                                </div>
                                 <button class="button_show_contact">
                                     <p class="button_font" style="font-size: 8px;">Показать контакты</p>
                                 </button>
@@ -110,9 +170,11 @@
                                             <img src="../src/icons/ellipse.svg" style="height: 3px; width: 3px;" alt="*">
                                             <p class="id_card_tag" style="font-size: 9px;">21 год</p>
                                             <img src="../src/icons/ellipse.svg" style="height: 3px; width: 3px;" alt="*">
-                                            <div class="tag_mini"></div>
+                                            <p class="id_card_tag" style="font-size: 9px;">2 курс бакалавриат ВШБ ИБ</p>
                                         </div>
-                                        <div class="tag_mini2"></div>
+                                        <div class="tag_mini2">
+                                            <p class="id_card_tag" style="font-size: 9px;">СТО в Бизнес в стиле .RU</p>
+                                        </div>
                                         <div style="display: flex; gap: 16px;">
                                             <p class="id_card_description">
                                                 Мне очень нравится устраивать вечеринки, дебоширить и мазать с...
@@ -146,15 +208,16 @@
                     <div class="info">
                         <div style="display: flex; flex-direction: column; gap: 4px;">
                             <div>
-                                <p class="big_title" style="font-size: 16px; line-height: 24px;">Мы совсем ничего про тебя не знаем</p>
+                                <p class="big_title" style="font-size: 16px; line-height: 24px;">Расскажи где ты учишься</p>
                             </div>
                             <div>
-                                <p class="id_card_description" style="font-size: 14px; line-height: 20px;">Расскажи о себе. 
-                                    Люди пишут тем, кому доверяют. Тем более при поиске соседа</p>
+                                <p class="id_card_description" style="font-size: 14px; line-height: 20px;">
+                                    Часто студенты ищут соседей по схожим интересам
+                                </p>
                             </div>
                         </div>
                         <div style="display: flex; justify-content: center; align-items: center">
-                            <img src="../src/icons/sad.svg" alt=";)">
+                            <img src="../src/icons/happy.svg" alt=";)">
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,551 @@
+.logo_image {
+    height: 48px;
+    width: 96px;
+}
+
+@font-face {
+    font-family: "MuseoSansCyrl300";
+    src: url(../fonts/MuseoSansCyrl300.otf) format(opentype);
+    font-style: normal;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+@font-face {
+    font-family: "MuseoSansCyrl500";
+    src: url(../fonts/MuseoSansCyrl500.otf) format(opentype);
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+@font-face {
+    font-family: "MuseoSansCyrl700";
+    src: url(../fonts/MuseoSansCyrl700.otf) format(opentype);
+    font-style: normal;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+.button_font {
+    font-family: "MuseoSansCyrl300";
+    font-size: 14px;
+    color: white;
+}
+
+.button_exit_text {
+    font-family: "MuseoSansCyrl300";
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(121, 83, 195);
+    line-height: 24px;
+}
+
+.big_title {
+    font-family: "MuseoSansCyrl700";
+    font-size: 32px;
+    color: rgb(4, 0, 19);
+    line-height: 40px;
+}
+
+.small_title {
+    font-family: "MuseoSansCyrl300";
+    font-size: 14px;
+    color: rgb(204, 204, 204);
+    line-height: 24px;
+}
+
+.id_card_name {
+    font-family: "MuseoSansCyrl700";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: rgb(4, 0, 19);
+}
+
+.id_card_tag {
+    font-family: "MuseoSansCyrl300";
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 11px;
+    color: rgb(4, 0, 19);
+}
+
+.id_card_description {
+    font-family: "MuseoSansCyrl300";
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 11px;
+    color: rgb(93, 91, 102);
+}
+
+.expand {
+    height: 2px;
+    width: 5px;
+    padding-top: 0.2px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-color: rgb(121, 83, 195);
+}
+
+.big_text {
+    font-family: "MuseoSansCyrl300";
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(4, 0, 19);
+    line-height: 24px;
+}
+
+.footer_title {    
+    font-family: "MuseoSansCyrl700";
+    color: rgb(121, 83, 195);
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -0.8px;
+}
+
+.form_title {
+    color: rgb(93, 91, 102);
+    font-family: "MuseoSansCyrl300";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.two-list{
+    display: flex;
+    justify-content: space-around;
+}
+
+.span {
+    background-color: rgb(20, 227, 234);
+}
+.p {
+    width: 500px;
+}
+
+.form {
+    display: block;
+}
+
+.button {
+    cursor: pointer;
+    position: relative;
+    /* left: 550px; */
+    /* top: 50px; */
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    transition: 1s all;
+}
+.button::before {
+    content: '';           
+    position: absolute;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    top: -0.5px;
+    left: -0.5px;
+    width: 10px;
+    height: 10px;
+    transition: 1s all;
+}
+.button::after {
+    content: '';           
+    position: absolute;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    bottom: -0.5px;
+    right: -0.5px;
+    width: 10px;
+    height: 10px;
+    transition: 1s all;
+}
+.button:hover {
+    background-color: black;
+    color: white;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.389);
+}
+.button:hover::before {
+    width: 100%;
+    height: 100%;
+    border-color: white;
+}
+.button:hover::after {
+    width: 100%;
+    height: 100%;
+    border-color: white;
+}
+
+.button_upload {
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 36px;
+    width: 144px;
+    border-radius: 8px;
+    background-color: rgb(121, 83, 195);
+}
+
+.button_show_contact {
+    cursor: pointer;
+    border: none;
+    padding: 6px 12px;
+    width: 140px;
+    border-radius: 4px;
+    background-color: rgb(121, 83, 195);
+    opacity: 20%;
+}
+
+.button_white {
+    cursor: pointer;
+    position: relative;
+    border: none;
+    /*height: 40px;
+    width: 173px;*/
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid;
+    border-color: rgb(121, 83, 195);
+    background-color: white;
+}
+
+.button_continue {
+    cursor: pointer;
+    border: none;
+    padding: 12px 64px;
+    border-radius: 8px;
+    background-color: rgb(121, 83, 195);
+    opacity: 20%;
+}
+
+.button_icon {
+    cursor: pointer;
+    border: none;
+    height: 16px;
+    width: 16px;
+    padding: 4px;
+    border-radius: 8px;
+    background-color: rgb(244, 244, 246);
+}
+
+.input_text {
+    cursor: text;
+    position: relative;
+    border: none;
+    outline: none;
+    padding: 16px 12px;
+    height: 32px;
+    width: 344px;
+    border-radius: 8px;
+    background-color: rgb(244, 244, 246);
+}
+
+.input_date {
+    cursor: pointer;
+    position: relative;
+    border: none;
+    outline: none;
+    padding: 16px 12px;
+    height: 32px;
+    width: 180px;
+    border-radius: 8px;
+    background-color: rgb(244, 244, 246);
+}
+
+.input_text label {
+    position: absolute;
+    color: rgb(161, 166, 177);
+    font-family: "MuseoSansCyrl300";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    transition: 0.2s all;
+    left: 12px;
+    top: 16px;
+    z-index: 1;
+}
+
+.input_text::placeholder {
+    color: rgb(161, 166, 177);
+    font-family: "MuseoSansCyrl300";
+    font-weight: 400;
+    font-size: 16px;
+    transition: 0.2s all;
+}
+
+.input_text:hover::placeholder {
+    color: rgb(93, 91, 102);
+    transition: 0.2s all;
+}
+
+.label_input {
+    position: absolute;
+    color: rgb(161, 166, 177);
+    font-family: "MuseoSansCyrl300";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    transition: 0.2s all;
+    margin-left: 12px;
+    margin-top: 16px;
+    z-index: 1;
+}
+
+input[type = "text"] {
+    color: rgb(4, 0, 19);
+    font-family: "MuseoSansCyrl300";
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.progress_bar_full {
+    width: 100%;
+	height: 2px;
+	background: rgb(244, 244, 246);
+}
+
+.progress_bar_now {
+    width: 40px;
+	height: 2px;
+	background: rgb(205, 189, 219);
+}
+
+.radio_input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.radio_input + label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.radio_input + label::before {
+    content: '';
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+    flex-shrink: 0; flex-grow: 0;
+    background-image: url(../icons/radio_off.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.radio_input:hover:not(:checked) + label::before {
+    /*background-color: rgba(120, 83, 195, 0.2);*/
+    background-image: url(../icons/radio_hover.svg);
+}
+
+.radio_input:checked + label::before {
+    background-image: url(../icons/radio_on.svg)
+}
+
+.radio_input.course + label::before {
+    border: 1px solid rgb(121, 83, 195);
+    border-radius: 4px;
+    background-image: none;
+}
+
+.radio_input.course:hover + label::before {
+    background-color: rgba(120, 83, 195, 0.2);
+    border-color: rgb(120, 83, 195);
+    background-image: none;
+}
+
+.radio_input.course:checked + label::before {
+    background-color: rgb(121, 83, 195);
+    background-image: url(../icons/tick.svg);
+}
+
+/*.radio_input::before {
+    background-image: url(../icons/radio_off.svg);
+    background-position: 50%;
+    height: 16px;
+    width: 16px;
+}
+
+.radio_input:checked {
+    background-image: url(../icons/radio_on.svg);
+}*/
+
+.radio_select {
+    margin-left: 4px;
+    display: flex;
+    gap: 16px;
+}
+
+.tag_mini {
+    width: 120px;
+    height: 11px;
+    background-color: rgb(238, 238, 241);
+    border-radius: 4px;
+}
+
+.tag_mini2 {
+    width: 121px;
+    height: 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(238, 238, 241);
+    border-radius: 4px;
+}
+
+.tag_mini3 {
+    width: 106px;
+    height: 11px;
+    background-color: rgb(244, 244, 246);
+    border-radius: 4px;
+}
+
+.tag1 {
+    width: 198px;
+    height: 20px;
+    background-color: rgb(238, 238, 241);
+    border-radius: 6px;
+}
+
+.tag2 {
+    width: 308px;
+    height: 14px;
+    background-color: rgb(238, 238, 241);
+    border-radius: 4px;
+}
+.tag3 {
+    width: 150px;
+    height: 16px;
+    background-color: rgb(238, 238, 241);
+    border-radius: 4px;
+}
+
+.id_card_line {
+    width: 374px;
+    height: 1px;
+    opacity: 50%;
+    background-color: rgb(204, 204, 204);
+    margin-top: 4px;
+    margin-bottom: 4px; 
+}
+
+.footer_line {
+    max-width: 1040px;
+    height: 1px;
+    opacity: 20%;
+    background-color: rgb(121, 83, 195);
+    margin-top: 4px;
+    margin-bottom: 4px; 
+}
+
+.href_not_serious {
+    height: 48px; 
+    width: 96px; 
+    cursor: pointer; 
+    position: absolute;
+}
+
+.select_input {
+    cursor: pointer;
+    position: relative;
+    border: none;
+    outline: none;
+    padding: 16px;
+    height: 56px;
+    width: 366px;
+    border-radius: 8px;
+    background-color: rgb(244, 244, 246);
+}
+
+.select_input + label {
+    position: absolute;
+    color: rgb(161, 166, 177);
+    font-family: "MuseoSansCyrl300";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 16px;
+    z-index: 1;
+}
+
+/*.label_input_select:checked + label::before {
+    opacity: 0;
+} doesn't work...*/
+
+.course_select {
+    padding: 8px;
+    width: 336px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.radio_course {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.radio_course + label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    transition: 0.2s all;
+}
+
+.radio_course + label::before {
+    content: "1";
+    font-family: "MuseoSansCyrl300";
+    font-weight: 400;
+    font-size: 14px;
+    color: rgb(4, 0, 19);
+    line-height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: none;
+    transition: 0.2s all;
+    border-radius: 8px;
+}
+
+.radio_course:hover + label::before {
+    background-color: rgba(121, 83, 195, 0.2);
+    transition: 0.2s all;
+}
+
+.radio_course:checked + label::before {
+    color: white;
+    background-color: rgb(121, 83, 195);
+    transition: 0.2s all;
+}
+
+.radio_course.one + label::before {
+    content: "1";
+}
+
+.radio_course.two + label::before {
+    content: "2";
+}
+
+.radio_course.three + label::before {
+    content: "3";
+}
+
+.radio_course.four + label::before {
+    content: "4";
+}
+
+.radio_course.five + label::before {
+    content: "5";
+}
+
+.radio_course.six + label::before {
+    content: "6";
+}
