@@ -86,7 +86,7 @@
     padding-top: 0.2px;
     display: flex;
     justify-content: center;
-    border: 1px solid;
+    border: none;
     border-color: rgb(121, 83, 195);
 }
 
