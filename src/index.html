@@ -41,15 +41,17 @@
                 <form action="">
                     <div class="div_left">
                         <div class="div_photo">
-                            <div class="div_photo_inner">
-                                <p class="big_text" style="color: black;">Аватар профиля</p>
-                                <input type="file" name="photo_upload" style="opacity: 0; position: absolute;;" id="photo_upload">
-                                    <p class="button_font">Загрузить</p>
-                                </input>
-                                <label for="photo_upload" class="button_upload">
-                                    <p class="button_font">Загрузить</p>
-                                </label>
-                            </div>
+                            <form action="">
+                                <div class="div_photo_inner">
+                                    <p class="big_text" style="color: black;">Аватар профиля</p>
+                                    <input type="file" name="photo_upload" style="opacity: 0; position: absolute;;" id="photo_upload">
+                                        <p class="button_font">Загрузить</p>
+                                    </input>
+                                    <label for="photo_upload" class="button_upload">
+                                        <p class="button_font">Загрузить</p>
+                                    </label>
+                                </div>
+                            </form>
                             <p class="small_title">
                                 Загрузите фотографию весом не более 10 мб
                             </p>
@@ -59,28 +61,57 @@
                                 <div class="div_form_inner">
                                     <!--<label for="name" class="label_input">Имя и фамилия</label>-->
                                     <input name="name" id="name" type="text" class="input_text" placeholder="Имя и фамилия">
+                                    <label for="name" id="name_error_format" class="form_title" style="color: red; align-self: flex-end" hidden>
+                                        <p>Неверный формат имени</p>
+                                    </label>
+                                    <label for="name" id="name_error_empty" class="form_title" style="color: red; align-self: flex-end" hidden>
+                                        <p>Обязательное поле</p>
+                                    </label>
                                 </div>
                                 <div class="radio_select">
                                     <div style="display: flex; gap: 8px;">
-                                        <input name="gender" id="male" type="radio" class="radio_input">
+                                        <input name="gender" id="male" value="male" type="radio" class="radio_input">
                                         <label for="male" class="big_text">Парень</label>
                                     </div>
                                     <div style="display: flex; gap: 8px;">
-                                        <input name="gender" id="female" type="radio" class="radio_input">
+                                        <input name="gender" id="female" value="female" type="radio" class="radio_input">
                                         <label for="female" class="big_text">Девушка</label>
                                     </div>                                    
                                 </div>
                             </div>
                             <div class="div_form_inner">
-                                <input type="date" class="input_date">
+                                <input type="date" id="input_date" class="input_date">
                             </div>
                             <div class="div_form_inner">
                                 <!--<label for="telegram_id" class="label_input">Телеграм</label>-->
                                 <input name="telegram_id" id="telegram_id" type="text" class="input_text" placeholder="Телеграм">
+                                <label for="telegram_id" id="telegram_error_format" class="form_title" style="color: red; align-self: flex-end" hidden>
+                                    <p>Неверный формат</p>
+                                </label>
+                                <label for="telegram_id" id="telegram_error_empty" class="form_title" style="color: red; align-self: flex-end" hidden>
+                                    <p>Обязательное поле</p>
+                                </label>
                             </div>
                             <div class="div_form_inner">
                                 <!--<label for="phone_number" class="label_input">Номер телефона</label>-->
                                 <input name="phone_number" id="phone_number" type="text" class="input_text" placeholder="Номер телефона">
+                                <label for="phone_number" id="phone_error_format" class="form_title" style="color: red; align-self: flex-end" hidden>
+                                    <p>Неверный формат</p>
+                                </label>
+                                <label for="phone_number" id="phone_error_empty" class="form_title" style="color: red; align-self: flex-end" hidden>
+                                    <p>Обязательное поле</p>
+                                </label>
+                            </div>
+                            <div class="div_form_inner" style="gap: 4px;">
+                                <textarea id="bio" name="bio" class="input_textarea" rows="4" placeholder="О себе"></textarea>
+                                <label for="bio" id="bio_error_empty" class="form_title" style="color: red; align-self: flex-end" hidden>
+                                    <p>Обязательное поле</p>
+                                </label>
+                                <div>
+                                    <p class="example">
+                                        Например: Редко готовлю, но люблю ботать на кухне по ночам. Хочу завести собаку. Очень люблю читать, играть в хорроры и смотреть аниме. Открыт к общению и взаимопомощи :)
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -89,13 +120,23 @@
                     <div style="display: flex; gap: 16px; flex-direction: column;">
                         <div>
                             <p class="small_title" style="color: rgb(93, 91, 102); margin-left: 16px;">
-                                Так будет выглядеть твоя будующая страница
+                                Так будет выглядеть твоя будущая страница
                             </p>
                         </div>
                         <div class="id_card">
                             <div class="id_card_left">
                                 <div class="id_card_photo_mini"></div>
-                                <button class="button_show_contact">
+                                <div id="contact_info" class="contact_info" style="display: none;">
+                                    <div class="contact_info_inner">
+                                        <p class="id_card_tag">Телеграм:</p>
+                                        <p class="id_card_tag" id="telegram_info"><!--@vinishko_tyan_UwU--></p>
+                                    </div>
+                                    <div class="contact_info_inner">
+                                        <p class="id_card_tag">Номер телефона: </p>
+                                        <p class="id_card_tag" id="phone_number_info"><!--+7(977) 743-81-16--></p>
+                                    </div>
+                                </div>
+                                <button class="button_show_contact" style="opacity: 0.2;">
                                     <p class="button_font" style="font-size: 8px;">Показать контакты</p>
                                 </button>
                             </div>
@@ -103,26 +144,26 @@
                                 <div style="display: flex; gap: 20px; flex-direction: column;">
                                     <div style="display: flex; gap: 10px; flex-direction: column;">
                                         <div>
-                                            <p class="id_card_name">Саша Фефелов</p>
+                                            <p class="id_card_name"></p>
                                         </div>
-                                        <div style="display: flex; gap: 4px; align-items: center;">
-                                            <p class="id_card_tag" style="font-size: 9px;">Парень</p>
-                                            <img src="../src/icons/ellipse.svg" style="height: 3px; width: 3px;" alt="*">
-                                            <p class="id_card_tag" style="font-size: 9px;">21 год</p>
-                                            <img src="../src/icons/ellipse.svg" style="height: 3px; width: 3px;" alt="*">
+                                        <div style="display: flex; align-items: center;">
+                                            <p class="id_card_tag" id="gender_show" style="font-size: 9px;"></p>
+                                            <img src="icons/ellipse.svg" id="ellipse" class="id_ellipse" hidden alt="*">
+                                            <p class="id_card_tag" id="age" style="font-size: 9px;"></p>
+                                            <img src="icons/ellipse.svg" id="ellipse" class="id_ellipse" hidden alt="*">
                                             <div class="tag_mini"></div>
                                         </div>
                                         <div class="tag_mini2"></div>
                                         <div style="display: flex; gap: 16px;">
-                                            <p class="id_card_description">
+                                            <p id="bio_show" class="id_card_description">
                                                 Мне очень нравится устраивать вечеринки, дебоширить и мазать с...
                                             </p>
-                                            <div style="display: flex; gap: 4px; align-items:center">
+                                            <div id="expand_button" style="display: flex; gap: 4px; align-items:center">
                                                 <p class="id_card_description" style="color: rgba(121, 83, 195, 1);">
                                                     развернуть
                                                 </p>
                                                 <div class="expand">
-                                                    <img style="height: 2.5px;" src="../src/icons/rectangle.svg" alt="\/">
+                                                    <img style="height: 2.5px;" src="icons/rectangle.svg" alt="\/">
                                                 </div>
                                             </div>
                                         </div>
@@ -154,7 +195,7 @@
                             </div>
                         </div>
                         <div style="display: flex; justify-content: center; align-items: center">
-                            <img src="../src/icons/sad.svg" alt=";)">
+                            <img src="icons/sad.svg" alt=";)">
                         </div>
                     </div>
                 </div>
@@ -181,10 +222,10 @@
                     </div>
                     <div style="display: flex; gap: 8px;">
                         <div class="button_icon">
-                            <img src="../src/icons/telegram_logo.svg" alt="tg">
+                            <img src="icons/telegram_logo.svg" alt="tg">
                         </div>
                         <div class="button_icon">
-                            <img src="../src/icons/vk_logo.svg" alt="vk">
+                            <img src="icons/vk_logo.svg" alt="vk">
                         </div>
                     </div>
                 </div>
@@ -208,5 +249,6 @@
         </div>
         <div style="background-color: rgb(121, 83, 195); height: 12px;"></div>
     </footer>
+    <script src="js/scrip.js"></script>
 </body>
 </html>
