@@ -71,16 +71,22 @@
                                 <div class="radio_select">
                                     <div style="display: flex; gap: 8px;">
                                         <input name="gender" id="male" value="male" type="radio" class="radio_input">
-                                        <label for="male" class="big_text">Парень</label>
+                                        <label for="male" name="gender" class="big_text">Парень</label>
                                     </div>
                                     <div style="display: flex; gap: 8px;">
                                         <input name="gender" id="female" value="female" type="radio" class="radio_input">
-                                        <label for="female" class="big_text">Девушка</label>
+                                        <label for="female" name="gender" class="big_text">Девушка</label>
                                     </div>                                    
                                 </div>
                             </div>
-                            <div class="div_form_inner">
-                                <input type="date" id="input_date" class="input_date">
+                            <div class="div_form_inner" style="width: 206px;">
+                                <input type="date" name="input_date" id="input_date" class="input_date">
+                                <label for="input_date" id="date_error_format" class="form_title" style="color: red; align-self: flex-end" hidden>
+                                    <p>Неверная дата</p>
+                                </label>
+                                <label for="input_date" id="date_error_empty" class="form_title" style="color: red; align-self: flex-end" hidden>
+                                    <p>Обязательное поле</p>
+                                </label>
                             </div>
                             <div class="div_form_inner">
                                 <!--<label for="telegram_id" class="label_input">Телеграм</label>-->
@@ -136,7 +142,7 @@
                                         <p class="id_card_tag" id="phone_number_info"><!--+7(977) 743-81-16--></p>
                                     </div>
                                 </div>
-                                <button class="button_show_contact" style="opacity: 0.2;">
+                                <button class="button_show_contact" style="opacity: 0.2;" disabled>
                                     <p class="button_font" style="font-size: 8px;">Показать контакты</p>
                                 </button>
                             </div>
@@ -155,15 +161,15 @@
                                         </div>
                                         <div class="tag_mini2"></div>
                                         <div style="display: flex; gap: 16px;">
-                                            <p id="bio_show" class="id_card_description">
-                                                Мне очень нравится устраивать вечеринки, дебоширить и мазать с...
+                                            <p id="bio_show" class="id_card_description" style="width: 300px;">
+                                                <!--Мне очень нравится устраивать вечеринки, дебоширить и мазать с...-->
                                             </p>
-                                            <div id="expand_button" style="display: flex; gap: 4px; align-items:center">
-                                                <p class="id_card_description" style="color: rgba(121, 83, 195, 1);">
+                                            <div style="display: flex; cursor: pointer; gap: 4px; align-items:center">
+                                                <p id="expand_button" value="true" class="id_card_description" hidden style="color: rgba(121, 83, 195, 1);">
                                                     развернуть
                                                 </p>
                                                 <div class="expand">
-                                                    <img style="height: 2.5px;" src="icons/rectangle.svg" alt="\/">
+                                                    <img id="expand_icon" src="icons/Arrow_down.svg" hidden alt="\/">
                                                 </div>
                                             </div>
                                         </div>
