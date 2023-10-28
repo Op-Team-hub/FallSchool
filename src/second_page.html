@@ -57,27 +57,27 @@
                                     <div class="course_select">
                                         <div>
                                             <input name="course" id="course1" type="radio" class="radio_course one">
-                                            <label for="course1"></label>
+                                            <label name="course" for="course1"></label>
                                         </div>
                                         <div>
                                             <input name="course" id="course2" type="radio" class="radio_course two">
-                                            <label for="course2"></label>
+                                            <label name="course" for="course2"></label>
                                         </div>
                                         <div>
                                             <input name="course" id="course3" type="radio" class="radio_course three">
-                                            <label for="course3"></label>
+                                            <label name="course" for="course3"></label>
                                         </div>
                                         <div>
                                             <input name="course" id="course4" type="radio" class="radio_course four">
-                                            <label for="course4"></label>
+                                            <label name="course" for="course4"></label>
                                         </div>
                                         <div>
                                             <input name="course" id="course5" type="radio" class="radio_course five">
-                                            <label for="course5"></label>
+                                            <label name="course" for="course5"></label>
                                         </div>
                                         <div>
                                             <input name="course" id="course6" type="radio" class="radio_course six">
-                                            <label for="course6"></label>
+                                            <label name="course" for="course6"></label>
                                         </div>
                                     </div>
                                 </div>
@@ -91,14 +91,14 @@
                                     <p class="form_title">Ступень образования</p>
                                 </div>
                                 <div style="display: flex; flex-direction: column;">
-                                    <select name="education_degree" id="education_degree" class="select_input">
+                                    <select id="degree_select" name="education_degree" id="education_degree" class="select_input">
                                         <option value="empty"></option>
-                                        <option value="bachelor">Бульбазавр</option>
+                                        <option value="bachelor">Бакалавр</option>
                                         <option value="specialist">Специалитет</option>
                                         <option value="master">Магистр</option>
                                         <option value="graduate">Аспирант</option>
                                     </select>
-                                    <label for="education_degree">
+                                    <label id="degree_lable" for="degree_select">
                                         Степень образования
                                     </label>
                                 </div>
@@ -108,14 +108,14 @@
                                     <p class="form_title">Факультет</p>
                                 </div>
                                 <div style="display: flex; flex-direction: column;">
-                                    <select name="faculty" id="faculty" class="select_input">
+                                    <select name="faculty" id="faculty_select" class="select_input">
                                         <option value="empty"></option>
                                         <option value="first">Самый лучший</option>
                                         <option value="second">В целом неплохой</option>
                                         <option value="third">Ну такой себе</option>
                                         <option value="last">Следующий вопрос</option>
                                     </select>
-                                    <label for="faculty">
+                                    <label id="faculty_label" for="faculty">
                                         Факультет
                                     </label>
                                 </div>
@@ -139,7 +139,13 @@
                             </div>
                         </div>
                         <div>
-                            <input type="text" class="input_text" placeholder="Работа">
+                            <input name="job" id="job" type="text" class="input_text" placeholder="Работа">
+                            <label for="job" id="job_error_format" class="form_title" style="color: red; align-self: flex-end" hidden>
+                                <p>Неверный формат</p>
+                            </label>
+                            <label for="job" id="job_error_empty" class="form_title" style="color: red; align-self: flex-end" hidden>
+                                <p>Обязательное поле</p>
+                            </label>
                         </div>
                     </div>
                 </form>
@@ -161,7 +167,7 @@
                             </div>
                             <div class="id_card_right">
                                 <div style="display: flex; gap: 20px; flex-direction: column;">
-                                    <div style="display: flex; gap: 10px; flex-direction: column;">
+                                    <div style="display: flex; gap: 10px; flex-direction: column; align-items: flex-start">
                                         <div>
                                             <p class="id_card_name"></p>
                                         </div>
@@ -170,10 +176,12 @@
                                             <img src="../src/icons/ellipse.svg" style="height: 3px; width: 3px;" alt="*">
                                             <p class="id_card_tag" style="font-size: 9px;">21 год</p>
                                             <img src="../src/icons/ellipse.svg" style="height: 3px; width: 3px;" alt="*">
-                                            <p class="id_card_tag" style="font-size: 9px;">2 курс бакалавриат ВШБ ИБ</p>
+                                            <p id="study_show" class="id_card_tag" style="font-size: 9px;">2 курс бакалавриат ВШБ ИБ</p>
                                         </div>
                                         <div class="tag_mini2">
-                                            <p class="id_card_tag" style="font-size: 9px;">СТО в Бизнес в стиле .RU</p>
+                                            <p id="job_show" class="id_card_tag" style="font-size: 9px;">
+                                                <!--СТО в Бизнес в стиле .RU-->
+                                            </p>
                                         </div>
                                         <div style="display: flex; gap: 16px;">
                                             <p class="id_card_description">
@@ -271,6 +279,6 @@
         </div>
         <div style="background-color: rgb(121, 83, 195); height: 12px;"></div>
     </footer>
-    <script src="js/scrip.js"></script>
+    <script src="js/second_page_scrip.js"></script>
 </body>
 </html>

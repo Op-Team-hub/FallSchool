@@ -97,9 +97,9 @@
 }
 
 .expand {
-    height: 2px;
+    height: 8px;
     width: 5px;
-    padding-top: 0.2px;
+    padding-top: 1px;
     display: flex;
     justify-content: center;
     border: none;
@@ -275,6 +275,11 @@
     width: 180px;
     border-radius: 8px;
     background-color: rgb(244, 244, 246);
+}
+
+.input_date.invalid {
+    background-color: rgb(255, 0, 0, 0.05);
+    border: 1px solid red;
 }
 
 .input_textarea {
@@ -463,8 +468,7 @@ textarea {
 }
 
 .tag_mini2 {
-    width: 121px;
-    height: 17px;
+    padding: 3px 6px;
     display: flex;
     justify-content: center;
     align-items: center;
